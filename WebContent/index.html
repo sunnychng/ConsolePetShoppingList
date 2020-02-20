@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pet Shopping</title>
+<style type="text/css">
+table{
+	border-collapse: collapse;
+  	width: 35%;}
+td {width: 25px;}
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.bold {font-weight:bold;}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0077be;
+  color: white;
+}
+.label-td{ width:30%;}
+.text-td{ width:70%; font-size: 12px;}
+.btn {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.btn, .btn:link, .btn:visited {
+    color: #FFFFFF;
+    background-color: #0077be;
+}
+.btn:hover {
+    color: #FFFFFF;
+    background-color: #368DC5;
+}
+</style>
+</head>
+<body>
+<form action="addItemServlet" method="post">
+<table>
+<tr>
+<td class="label-td">Pet Type:</td>
+<td class="text-td"><input type ="text" name = "petType" size="30"></td>
+</tr>
+<tr>
+<td><label>Pet Name: </label></td>
+<td><input  type = "text" name = "petName" size="30"></td>
+</tr>
+<tr>
+<td><label>Pet Owner: </label></td>
+<td><input type = "text" name = "petOwner" size="30"></td>
+</tr>
+</table>
+<p><input class="btn" type = "submit" value="Add Item"></p>
+</form>
+<p><a href = "viewAllItemsServlet">View the complete list</a></p>
+</body>
+</html>
