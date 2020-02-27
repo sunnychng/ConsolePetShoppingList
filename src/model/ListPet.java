@@ -1,6 +1,8 @@
 // final annotated ListPet POJO
 package model;
 
+import javax.persistence.CascadeType;
+
 /*All these import statements came in by clicking the red X and using
 *  Import option from the javax.persistence package
 */
@@ -11,9 +13,11 @@ package model;
  */
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity

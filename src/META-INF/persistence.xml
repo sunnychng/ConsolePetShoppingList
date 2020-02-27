@@ -3,6 +3,9 @@
 	<persistence-unit name="ConsolePetShoppingList" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.ListPet</class>
+		<class>model.PetsSitter</class>
+		<class>model.PetsDetails</class>
+		<class>controller.LocalDateAttributeConverter</class>
 		<validation-mode>NONE</validation-mode>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
