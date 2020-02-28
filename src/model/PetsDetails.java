@@ -29,7 +29,7 @@ public class PetsDetails {
 	private String ownerPhone;
 	@Column(name="TRIP_DATE")
 	private LocalDate tripDate;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST )
 	@JoinColumn(name="PETS_SITTER_ID")
 	private PetsSitter petsSitter;
 	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
@@ -45,12 +45,15 @@ public class PetsDetails {
 		// TODO Auto-generated constructor stub
 	}
 
-	public PetsDetails(String ownerName, String ownerPhone, LocalDate tripDate, PetsSitter petsSitter) {
+	public PetsDetails(int id, String ownerName, String ownerPhone, LocalDate tripDate, PetsSitter petsSitter,
+			List<ListPet> listOfPets) {
 		super();
+		this.id = id;
 		this.ownerName = ownerName;
 		this.ownerPhone = ownerPhone;
 		this.tripDate = tripDate;
 		this.petsSitter = petsSitter;
+		this.listOfPets = listOfPets;
 	}
 	
 	public PetsDetails(String ownerName, String ownerPhone, LocalDate tripDate, PetsSitter petsSitter,
@@ -63,15 +66,12 @@ public class PetsDetails {
 		this.listOfPets = listOfPets;
 	}
 	
-	public PetsDetails(int id, String ownerName, String ownerPhone, LocalDate tripDate, PetsSitter petsSitter,
-			List<ListPet> listOfPets) {
+	public PetsDetails(String ownerName, String ownerPhone, LocalDate tripDate, PetsSitter petsSitter) {
 		super();
-		this.id = id;
 		this.ownerName = ownerName;
 		this.ownerPhone = ownerPhone;
 		this.tripDate = tripDate;
 		this.petsSitter = petsSitter;
-		this.listOfPets = listOfPets;
 	}
 
 	public int getId() {

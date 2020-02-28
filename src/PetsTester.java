@@ -15,7 +15,8 @@ public class PetsTester {
 		
 		PetsSitter john = new PetsSitter("John");
 		
-		PetsSitterHelper psh = new PetsSitterHelper();
+		PetsDetailsHelper pdh = new PetsDetailsHelper();
+		//PetsSitterHelper psh = new PetsSitterHelper();
 		
 		ListPet dog = new ListPet("Dog", "Rover", "Smith");
 		ListPet hamster = new ListPet("Hamster", "Pokey", "King");
@@ -30,8 +31,7 @@ public class PetsTester {
 		//for (PetsSitter a: allPetsSitter) {
 		//	System.out.println(a.toString());
 		//}
-		
-		PetsDetailsHelper pdh = new PetsDetailsHelper();
+				
 		PetsDetails johnList = new PetsDetails("John", "15152226666", LocalDate.now(), john);
 		johnList.setListOfPets(johnsPets);
 		
